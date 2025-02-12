@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdR", "AdR\AdR.csproj", "{AE8E686E-2D38-4174-9376-FD375A11E02B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE8E686E-2D38-4174-9376-FD375A11E02B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE8E686E-2D38-4174-9376-FD375A11E02B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE8E686E-2D38-4174-9376-FD375A11E02B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE8E686E-2D38-4174-9376-FD375A11E02B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {945A05B6-D49C-4B82-BD84-3C275A0AB797}
+	EndGlobalSection
+EndGlobal
