@@ -1,5 +1,4 @@
 ﻿using AdR.Models.Enums;
-using System.Net.Mail;
 
 namespace AdR.Models
 {

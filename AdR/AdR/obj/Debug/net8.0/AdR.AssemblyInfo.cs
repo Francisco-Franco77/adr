@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AdR")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bdfb443f424fde160098d0a05463c25ff8da6049")]
 [assembly: System.Reflection.AssemblyProductAttribute("AdR")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AdR")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

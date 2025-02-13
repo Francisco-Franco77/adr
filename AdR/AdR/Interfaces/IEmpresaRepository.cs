@@ -4,7 +4,7 @@ namespace AdR.Interfaces
 {
     public interface IEmpresaRepository
     {
-        int CreateEmpresa(Empresa empresa);
+        MensagemServiceResult CreateEmpresa(Empresa empresa);
 
         Empresa GetEmpresa(int id);
     }

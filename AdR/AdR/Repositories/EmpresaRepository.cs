@@ -6,10 +6,18 @@ namespace AdR.Repositories
 {
     public class EmpresaRepository(AdrDbContext db) : IEmpresaRepository
     {
-        public int CreateEmpresa(Empresa empresa)
+        public MensagemServiceResult CreateEmpresa(Empresa empresa)
         {
-            db.Add(empresa);
-            return db.SaveChanges();
+            try
+            {
+                db.Add(empresa);
+                db.SaveChanges();
+                return new MensagemServiceResult(true, "Empresa de cnpj: " + empresa.Cnpj + " cadastrada com id: " + empresa.Id);
+            }
+            catch (Exception ex)
+            {
+                return new MensagemServiceResult(false, "Empresa não pode ser cadastrada. Erro: " + ex.Message);
+            }
         }
 
         public Empresa GetEmpresa(int id)

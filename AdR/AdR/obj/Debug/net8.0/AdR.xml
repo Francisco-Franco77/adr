@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AdR</name>
+    </assembly>
+    <members>
+        <member name="T:AdR.Controllers.CadastroController">
+            <summary>
+            Responsável por funções de criaçao e edição dos dados de empresas e de notas fiscais
+            </summary>
+            <param name="cadastroService"></param>
+        </member>
+        <member name="M:AdR.Controllers.CadastroController.#ctor(AdR.Services.CadastroService)">
+            <summary>
+            Responsável por funções de criaçao e edição dos dados de empresas e de notas fiscais
+            </summary>
+            <param name="cadastroService"></param>
+        </member>
+        <member name="M:AdR.Controllers.CadastroController.CreateEmpresa(System.String,System.String,System.Decimal,AdR.Models.Enums.Ramo)">
+            <summary>
+            Realiza cadastro de empresa
+            </summary>
+            <param name="cnpj">CNPJ da empresa</param>
+            <param name="nome">Nome da empresa</param>
+            <param name="faturamento">Valor de faturamento mensal da empresa</param>
+            <param name="ramo">Ramo da empresa:
+            1- Serviços
+            2- Produtos</param>
+            <returns></returns>
+        </member>
+        <member name="M:AdR.Controllers.CadastroController.CreateNota(System.Int32,System.Decimal,System.DateOnly,System.Int32)">
+            <summary>
+            Realiza cadastro de uma nota fiscal
+            </summary>
+            <param name="numero">Número da nota</param>
+            <param name="valor">Valor da nota</param>
+            <param name="data">Data de vencimento da nota em formato YYYY-MM-DD</param>
+            <param name="idEmpresa">Identidificador da Empresa criadora da nota na tabela</param>
+            <returns></returns>
+        </member>
+        <member name="M:AdR.Controllers.CadastroController.EditNota(System.Int32,System.Nullable{System.Decimal},System.Nullable{System.DateOnly})">
+            <summary>
+            Edita valor ou data de uma nota
+            </summary>
+            <param name="numero">Número da nota a ser editada</param>
+            <param name="valor">Novo valor desejado para a nota (deixar em branco se deseja manter o mesmo)</param>
+            <param name="data">Nova data de vencimento desejada para a nota (deixar em branco se deseja manter a mesma)</param>
+            <returns></returns>
+        </member>
+        <member name="M:AdR.Controllers.CadastroController.DeleteNota(System.Int32)">
+            <summary>
+            Remove uma nota cadastrada do banco
+            </summary>
+            <param name="numero">Número da nota a ser removida</param>
+            <returns></returns>
+        </member>
+        <member name="T:AdR.Controllers.CarrinhoController">
+            <summary>
+            Responsável por operações de edição do carrinho e pela função de checkout
+            </summary>
+            <param name="carrinhoService"></param>
+        </member>
+        <member name="M:AdR.Controllers.CarrinhoController.#ctor(AdR.Services.CarrinhoService)">
+            <summary>
+            Responsável por operações de edição do carrinho e pela função de checkout
+            </summary>
+            <param name="carrinhoService"></param>
+        </member>
+        <member name="M:AdR.Controllers.CarrinhoController.AdicionarCarrinho(System.Int32,System.Int32[])">
+            <summary>
+            Adiciona itens no carrinho, criando um arquivo de carrinho para a empresa se não houver
+            </summary>
+            <param name="empresaId">Identidificador da Empresa</param>
+            <param name="notas">Numeros das notas a serem adicionadas no carrinho</param>
+            <returns></returns>
+        </member>
+        <member name="M:AdR.Controllers.CarrinhoController.VerificarCarrinho(System.Int32)">
+            <summary>
+            Retorna os itens contidos no carrinho da empresa
+            </summary>
+            <param name="empresaId">Identidificador da Empresa</param>
+            <returns></returns>
+        </member>
+        <member name="M:AdR.Controllers.CarrinhoController.RemoverCarrinho(System.Int32,System.Int32[])">
+            <summary>
+            Remove itens do carrinho
+            </summary>
+            <param name="empresaId">Identidificador da Empresa</param>
+            <param name="notas">Numeros das notas a serem removidos do carrinho</param>
+            <returns></returns>
+        </member>
+        <member name="M:AdR.Controllers.CarrinhoController.Checkout(System.Int32)">
+            <summary>
+            Realiza o processo de checkout
+            </summary>
+            <param name="empresaId">Identidificador da Empresa</param>
+            <returns></returns>
+        </member>
+        <member name="T:AdR.Models.Enums.Ramo">
+            <summary>
+            Ramo indica se a empresa é do ramo de 1-Serviços ou 2-Produtos
+            </summary>
+        </member>
+    </members>
+</doc>

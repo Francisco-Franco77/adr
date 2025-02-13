@@ -1,22 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Projects\\Size\\AdR\\",
+  "WorkspaceRootPath": "D:\\Projects\\Size\\adr\\AdR\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AE8E686E-2D38-4174-9376-FD375A11E02B}|AdR\\AdR.csproj|d:\\projects\\size\\adr\\adr\\controllers\\carrinhocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE8E686E-2D38-4174-9376-FD375A11E02B}|AdR\\AdR.csproj|solutionrelative:adr\\controllers\\carrinhocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE8E686E-2D38-4174-9376-FD375A11E02B}|AdR\\AdR.csproj|d:\\projects\\size\\adr\\adr\\services\\carrinhoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AE8E686E-2D38-4174-9376-FD375A11E02B}|AdR\\AdR.csproj|d:\\projects\\size\\adr\\adr\\adr\\services\\carrinhoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE8E686E-2D38-4174-9376-FD375A11E02B}|AdR\\AdR.csproj|solutionrelative:adr\\services\\carrinhoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE8E686E-2D38-4174-9376-FD375A11E02B}|AdR\\AdR.csproj|d:\\projects\\size\\adr\\adr\\models\\mensagemserviceresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE8E686E-2D38-4174-9376-FD375A11E02B}|AdR\\AdR.csproj|solutionrelative:adr\\models\\mensagemserviceresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE8E686E-2D38-4174-9376-FD375A11E02B}|AdR\\AdR.csproj|d:\\projects\\size\\adr\\adr\\repositories\\notarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE8E686E-2D38-4174-9376-FD375A11E02B}|AdR\\AdR.csproj|solutionrelative:adr\\repositories\\notarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,53 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CarrinhoController.cs",
-              "DocumentMoniker": "D:\\Projects\\Size\\AdR\\AdR\\Controllers\\CarrinhoController.cs",
-              "RelativeDocumentMoniker": "AdR\\Controllers\\CarrinhoController.cs",
-              "ToolTip": "D:\\Projects\\Size\\AdR\\AdR\\Controllers\\CarrinhoController.cs",
-              "RelativeToolTip": "AdR\\Controllers\\CarrinhoController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCQAAABgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T20:19:29.096Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "CarrinhoService.cs",
-              "DocumentMoniker": "D:\\Projects\\Size\\AdR\\AdR\\Services\\CarrinhoService.cs",
+              "DocumentMoniker": "D:\\Projects\\Size\\adr\\AdR\\AdR\\Services\\CarrinhoService.cs",
               "RelativeDocumentMoniker": "AdR\\Services\\CarrinhoService.cs",
-              "ToolTip": "D:\\Projects\\Size\\AdR\\AdR\\Services\\CarrinhoService.cs",
+              "ToolTip": "D:\\Projects\\Size\\adr\\AdR\\AdR\\Services\\CarrinhoService.cs",
               "RelativeToolTip": "AdR\\Services\\CarrinhoService.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAswEAAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T19:52:27.059Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "NotaRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\Size\\AdR\\AdR\\Repositories\\NotaRepository.cs",
-              "RelativeDocumentMoniker": "AdR\\Repositories\\NotaRepository.cs",
-              "ToolTip": "D:\\Projects\\Size\\AdR\\AdR\\Repositories\\NotaRepository.cs",
-              "RelativeToolTip": "AdR\\Repositories\\NotaRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T19:59:23.355Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MensagemServiceResult.cs",
-              "DocumentMoniker": "D:\\Projects\\Size\\AdR\\AdR\\Models\\MensagemServiceResult.cs",
-              "RelativeDocumentMoniker": "AdR\\Models\\MensagemServiceResult.cs",
-              "ToolTip": "D:\\Projects\\Size\\AdR\\AdR\\Models\\MensagemServiceResult.cs",
-              "RelativeToolTip": "AdR\\Models\\MensagemServiceResult.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAUAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T19:57:16.007Z",
+              "WhenOpened": "2025-02-13T16:53:38.343Z",
               "EditorCaption": ""
             }
           ]

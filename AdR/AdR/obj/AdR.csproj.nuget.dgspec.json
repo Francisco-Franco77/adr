@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\Size\\AdR\\AdR\\AdR.csproj": {}
+    "D:\\Projects\\Size\\adr\\AdR\\AdR\\AdR.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\Size\\AdR\\AdR\\AdR.csproj": {
+    "D:\\Projects\\Size\\adr\\AdR\\AdR\\AdR.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Size\\AdR\\AdR\\AdR.csproj",
+        "projectUniqueName": "D:\\Projects\\Size\\adr\\AdR\\AdR\\AdR.csproj",
         "projectName": "AdR",
-        "projectPath": "D:\\Projects\\Size\\AdR\\AdR\\AdR.csproj",
+        "projectPath": "D:\\Projects\\Size\\adr\\AdR\\AdR\\AdR.csproj",
         "packagesPath": "C:\\Users\\Francisco\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Size\\AdR\\AdR\\obj\\",
+        "outputPath": "D:\\Projects\\Size\\adr\\AdR\\AdR\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Programas\\Visual Studio\\Shared\\NuGetPackages"

@@ -2,10 +2,7 @@
 using AdR.Models;
 using AdR.Models.Enums;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Storage.Json;
 using Newtonsoft.Json;
-using System.ComponentModel;
-using System.IO;
 using System.Text;
 
 namespace AdR.Services
@@ -16,16 +13,20 @@ namespace AdR.Services
         {
             string carrinhoPath = this.FormCarrinhoPath(empresaId);
 
+            List<Nota> notasSalvas = notaRepository.ReadNota(notas);
             try
             {
                 using (StreamWriter writer = File.AppendText(carrinhoPath))
                 {
-                    foreach (int nota in notas)
+                    foreach (Nota nota in notasSalvas)
                     {
-                        writer.WriteLine(nota);
+                        if(nota.EmpresaId == empresaId)
+                        {
+                            writer.WriteLine(nota.Numero);
+                        }
                     }
                 }
-                return new MensagemServiceResult(true, "Carrinho atualizado em: "+empresaId+".txt");
+                return new MensagemServiceResult(true, "Carrinho atualizado em: " + empresaId + ".txt");
             }
             catch
             {
@@ -82,7 +83,7 @@ namespace AdR.Services
                         }
                     }
                 }
-                File.WriteAllText(carrinhoPath,string.Empty);
+                File.WriteAllText(carrinhoPath, string.Empty);
             }
             catch
             {
@@ -134,10 +135,12 @@ namespace AdR.Services
             }
 
             List<Nota> notas = notaRepository.ReadNota(notaIds);
+            if (notas.Count == 0)
+                return new MensagemServiceResult(false, "Carrinho não contem notas válidas");
             List<ValorNota> respostaNotas = [];
             decimal limiteCredito = this.CalculaLimiteCredito(empresa.Faturamento, empresa.Ramo);
             decimal valorTotal = 0, valorLiquidoTotal = 0;
-            foreach(Nota nota in notas)
+            foreach (Nota nota in notas)
             {
                 decimal valorLiquido = this.CalculaValorLiquido(nota.DataVencimento, nota.Valor);
                 valorTotal += nota.Valor;
@@ -153,7 +156,7 @@ namespace AdR.Services
                     cnpj = empresa.Cnpj,
                     limite = limiteCredito,
                     checkout = false,
-                    mensagem = "Checkout recusado. Valor total "+valorTotal+" é maior que seu limite de crédito."
+                    mensagem = "Checkout recusado. Valor total " + valorTotal + " é maior que seu limite de crédito."
                 });
                 return new MensagemServiceResult(false, mensagemErro);
             }
@@ -167,7 +170,7 @@ namespace AdR.Services
                 total_bruto = valorTotal,
                 checkout = true
             });
-            return new MensagemServiceResult(false, mensagem);
+            return new MensagemServiceResult(true, mensagem);
         }
 
         private string FormCarrinhoPath(int empresaId)
@@ -215,8 +218,8 @@ namespace AdR.Services
             const double taxa = 0.0465;
             DateOnly dataAtual = DateOnly.FromDateTime(DateTime.Now);
             double prazo = vencimento.DayNumber - dataAtual.DayNumber;
-            decimal valorLiquido = valorBruto/(decimal)Math.Pow((1 + taxa), (prazo / 30));
-            return Math.Round(valorLiquido,2);
+            decimal valorLiquido = valorBruto / (decimal)Math.Pow((1 + taxa), (prazo / 30));
+            return Math.Round(valorLiquido, 2);
         }
     }
 }

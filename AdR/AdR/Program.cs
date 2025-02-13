@@ -4,19 +4,27 @@ using AdR.Interfaces;
 using AdR.Repositories;
 using AdR.Services;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-builder.Configuration.SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json", optional:true, reloadOnChange:true);
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1",
+        new Microsoft.OpenApi.Models.OpenApiInfo
+        {
+            Title = "Antecipação de Recebíveis - API",
+            Version = "v1"
+        }
+     );
+    c.IncludeXmlComments(Assembly.GetExecutingAssembly());
+});
+builder.Configuration.SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
 var connectionPath = builder.Configuration.GetValue<string>("DatabasePath");
 
-builder.Services.AddDbContext<AdrDbContext>(opt=> opt.UseSqlServer(connectionPath));
+builder.Services.AddDbContext<AdrDbContext>(opt => opt.UseSqlServer(connectionPath));
 builder.Services.AddScoped<IEmpresaRepository, EmpresaRepository>();
 builder.Services.AddScoped<INotaRepository, NotaRepository>();
 
@@ -35,10 +43,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
-app.UseAuthentication();
-
-app.UseAuthorization();
 
 app.MapControllers();
 

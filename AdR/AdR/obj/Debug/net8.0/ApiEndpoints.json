@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "AdR.Controllers.CadastroController",
-    "Method": "PostEmpresa",
+    "Method": "CreateEmpresa",
     "RelativePath": "Api/Cadastro/Empresa",
     "HttpMethod": "POST",
     "IsController": true,
@@ -47,7 +47,7 @@
   },
   {
     "ContainingType": "AdR.Controllers.CadastroController",
-    "Method": "PostNota",
+    "Method": "CreateNota",
     "RelativePath": "Api/Cadastro/Nota",
     "HttpMethod": "POST",
     "IsController": true,
@@ -70,6 +70,78 @@
       },
       {
         "Name": "idEmpresa",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "AdR.Controllers.CadastroController",
+    "Method": "EditNota",
+    "RelativePath": "Api/Cadastro/Nota",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "numero",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "valor",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "data",
+        "Type": "System.Nullable\u00601[[System.DateOnly, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "AdR.Controllers.CadastroController",
+    "Method": "DeleteNota",
+    "RelativePath": "Api/Cadastro/Nota",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "numero",
         "Type": "System.Int32",
         "IsRequired": false
       }
